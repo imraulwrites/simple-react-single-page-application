@@ -1,3 +1,29 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
+@import 'tailwindcss';
 
+@theme {
+  /* Font */
+  --font-sans: 'Manrope', sans-serif;
+
+  /* Custom Color */
+  --color-primary: #4f39f6;
+  --color-dark-shade: #101727;
+  --color-muted: #627382;
+  --color-heading-dark: #101727ff;
+}
+
+@utility wrapper {
+  max-width: 1200px;
+  margin-inline: auto;
+  /* padding-inline: 1rem; */
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+}
+
+.btn-primary {
+  @apply text-white text-base font-semibold px-4 py-3 bg-gradient-to-b from-[rgba(79,57,246,1)] to-[rgba(149,20,250,1)] rounded-3xl cursor-pointer hover:opacity-90 duration-300;
+}
