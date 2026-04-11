@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
 import Products from './components/sections/Products';
 import Stats from './components/sections/Stats';
+import NewCustomer from './components/sections/NewCustomer';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -32,6 +33,7 @@ function App() {
       <Navbar cart={cart} />
       <Hero />
       <Stats />
+      <NewCustomer />
       <Products
         isCartOpen={isCartOpen}
         setIsCartOpen={setIsCartOpen}
