@@ -5,6 +5,7 @@ import Hero from './components/sections/Hero';
 import Products from './components/sections/Products';
 import Stats from './components/sections/Stats';
 import NewCustomer from './components/sections/NewCustomer';
+import PricingContainer from './components/sections/PricingContainer';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -43,6 +44,7 @@ function App() {
         removeFromCart={removeFromCart}
         totalCartPrice={totalCartPrice}
       />
+      <PricingContainer />
 
       <Footer />
     </section>
