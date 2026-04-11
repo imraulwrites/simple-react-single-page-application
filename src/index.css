@@ -11,7 +11,6 @@
   --color-dark-shade: #101727;
   --color-muted: #627382;
   --color-heading-dark: #101727ff;
-  
 }
 
 @utility wrapper {
@@ -30,10 +29,25 @@ body {
 }
 
 .btn-primary {
-  @apply text-white text-base font-semibold px-4 py-3 bg-gradient-to-b from-[rgba(79,57,246,1)] to-[rgba(149,20,250,1)] rounded-3xl cursor-pointer hover:opacity-90 duration-300;
+  @apply text-white text-base font-semibold px-4 py-3 bg-gradient-to-b from-[rgba(79,57,246,1)] to-[rgba(149,20,250,1)] rounded-3xl cursor-pointer hover:opacity-90 transition-all duration-500;
+}
+
+.btn-normal {
+  @apply text-base font-semibold px-4 py-3 bg-transparent rounded-3xl cursor-pointer hover:opacity-90 transition-all duration-500;
 }
 
 .custom-text-gradient {
   @apply bg-gradient-to-b from-[rgba(79,57,246,1)] to-[rgba(149,20,250,1)] bg-clip-text text-transparent;
 }
 
+.popular {
+  @apply text-[#bb4d00] font-medium text-sm bg-[#fef3c6] rounded-4xl px-3 py-1.5 capitalize;
+}
+
+.new {
+  @apply text-[#0a883e] font-medium text-sm bg-[#dbfce7] rounded-4xl px-3 py-1.5 capitalize;
+}
+
+.best-seller {
+  @apply text-primary font-medium text-sm bg-[#e1e7ff] rounded-4xl px-3 py-1.5 capitalize;
+}

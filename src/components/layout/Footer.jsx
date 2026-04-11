@@ -26,24 +26,30 @@ function Footer() {
             <div>
               <h4 className="font-medium text-xl mb-4">Products</h4>
               <ul>
-                {product.map(item => (
-                  <li className="mb-4">{item}</li>
+                {product.map((item, id) => (
+                  <li key={id} className="mb-4">
+                    {item}
+                  </li>
                 ))}
               </ul>
             </div>
             <div>
               <h4 className="font-medium text-xl mb-4">Company</h4>
               <ul>
-                {company.map(item => (
-                  <li className="mb-4">{item}</li>
+                {company.map((item, id) => (
+                  <li key={id} className="mb-4">
+                    {item}
+                  </li>
                 ))}
               </ul>
             </div>
             <div>
               <h4 className="font-medium text-xl mb-4">Resources</h4>
               <ul>
-                {resources.map(item => (
-                  <li className="mb-4">{item}</li>
+                {resources.map((item, id) => (
+                  <li key={id} className="mb-4">
+                    {item}
+                  </li>
                 ))}
               </ul>
             </div>
