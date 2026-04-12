@@ -6,6 +6,7 @@ import Products from './components/sections/Products';
 import Stats from './components/sections/Stats';
 import NewCustomer from './components/sections/NewCustomer';
 import PricingContainer from './components/sections/PricingContainer';
+import Workflow from './components/sections/Workflow';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -45,6 +46,7 @@ function App() {
         totalCartPrice={totalCartPrice}
       />
       <PricingContainer />
+      <Workflow />
 
       <Footer />
     </section>
