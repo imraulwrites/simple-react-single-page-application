@@ -1,6 +1,6 @@
 import Banner from '../../assets/banner.png';
 import Circle from '../../assets/circle.png';
-import Play from '../../assets/play.png';
+import Play from '../../assets/Play.png';
 import Button from '../ui/Button';
 
 function Hero() {
