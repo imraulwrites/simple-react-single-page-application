@@ -1,4 +1,4 @@
-import React from 'react';
+import { toast } from 'react-toastify';
 import DesignTool from '../../assets/products/design-tool.png';
 
 function CartElement({ item, removeFromCart }) {
@@ -15,7 +15,10 @@ function CartElement({ item, removeFromCart }) {
       </div>
       <div>
         <button
-          onClick={() => removeFromCart(item)}
+          onClick={() => {
+            removeFromCart(item);
+            toast.warning('Item Removed from Cart');
+          }}
           className="text-[#ff3980FF] font-bold cursor-pointer "
         >
           Remove

@@ -8,7 +8,7 @@ function NewCustomer() {
     <section className="wrapper py-30 text-center flex flex-col items-center justify-center">
       <h1 className='text-5xl font-extrabold text-heading-dark mb-4'>Get Started in 3 Steps</h1>
       <p className='text-base font-normal text-muted mb-10'>Start using premium digital tools in minutes, not hours.</p>
-      <div className="flex gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
           <NewCustomerCard
             image={User}

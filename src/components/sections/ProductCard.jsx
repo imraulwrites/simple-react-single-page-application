@@ -1,13 +1,13 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import Button from '../ui/Button';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import DesignTool from '../../assets/products/design-tool.png';
 import Operation from '../../assets/products/operation.png';
 import Portfolio from '../../assets/products/portfolio.png';
-import ShoppingCart from '../../assets/products/shopping-cart.png';
 import SocialMedia from '../../assets/products/social-media.png';
 import Writing from '../../assets/products/writing_2327400 1.png';
+import { toast } from 'react-toastify';
 
 const imagesList = {
   0: DesignTool,
@@ -23,10 +23,14 @@ const randomImg = () => {
   return image;
 };
 
-function ProductCard({ product, addToCart }) {
+const notify = () => toast('Item added to Cart');
+
+function ProductCard({ product, addToCart, cart }) {
+  const isAdded = cart?.some(item => item.id === product.id);
+  console.log(isAdded);
   const img = useMemo(() => randomImg(), []);
   return (
-    <div className="flex flex-col gap-4 p-6 border-2 border-muted/20 rounded-2xl relative">
+    <div className="flex flex-col gap-4 p-6 border border-muted/20 rounded-2xl relative hover:-translate-y-2 duration-200 shadow-md">
       <div
         className={`absolute right-3 top-3 ${product.tag === 'popular' ? 'popular' : product.tag === 'new' ? 'new' : product.tag === 'best seller' ? 'best-seller' : ''}`}
       >
@@ -34,7 +38,7 @@ function ProductCard({ product, addToCart }) {
       </div>
 
       <div className="pt-4 w-fit">
-        <img className="border-[1px] border-muted/10 rounded-full p-2" src={img} alt="" />
+        <img className="border border-muted/10 rounded-full p-2" src={img} alt="" />
       </div>
 
       <div>
@@ -57,8 +61,19 @@ function ProductCard({ product, addToCart }) {
           ))}
       </ul>
 
-      <div onClick={() => addToCart(product)} className="">
-        <Button className="btn-primary">Buy Now</Button>
+      <div
+        onClick={() => {
+          addToCart(product);
+          notify();
+        }}
+        className=""
+      >
+        <Button
+          disabled={isAdded}
+          className={`${isAdded ? 'text-base text-heading-dark/90 font-semibold px-4 py-3 bg-gray-200 rounded-3xl hover:opacity-90 transition-all duration-500;' : 'btn-primary'}`}
+        >
+          {isAdded ? 'Added to List' : 'Buy Now'}
+        </Button>
       </div>
     </div>
   );

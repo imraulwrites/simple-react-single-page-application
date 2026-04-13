@@ -5,9 +5,9 @@ import Button from '../ui/Button';
 
 function Hero() {
   return (
-    <section className="wrapper flex flex-row-reverse justify-between my-16">
+    <section className="wrapper flex flex-col-reverse md:flex-row-reverse justify-between gap-4 my-16">
       {/* hero image */}
-      <div className="flex-[40%] flex lg:justify-end">
+      <div className="flex-[40%] flex justify-center md:justify-end">
         <img src={Banner} alt="Banner Image" />
       </div>
 
@@ -21,14 +21,14 @@ function Hero() {
             </span>
           </div>
 
-          <h1 className="text-7xl font-extrabold text-heading-dark">
+          <h1 className="text-7xl font-extrabold text-heading-dark text-center md:text-left">
             Supercharge Your Digital Workflow
           </h1>
-          <p className="text-lg/ text-muted">
+          <p className="text-lg/ text-muted text-center md:text-left">
             Access premium AI tools, design assets, templates, and productivity software—all in one
             place. Start creating faster today. <br /> Explore Products{' '}
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 justify-center md:justify-start">
             <Button className="btn-primary">Explore Products</Button>
             <Button className="flex items-center gap-2 custom-text-gradient text-base font-bold border-2 border-primary px-4 py-3 rounded-3xl outline-0">
               <img src={Play} alt="" /> <span className="">Watch Demo</span>

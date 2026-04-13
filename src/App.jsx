@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Footer from './components/layout/Footer';
 import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
@@ -7,6 +7,7 @@ import Stats from './components/sections/Stats';
 import NewCustomer from './components/sections/NewCustomer';
 import PricingContainer from './components/sections/PricingContainer';
 import Workflow from './components/sections/Workflow';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -49,6 +50,8 @@ function App() {
       <Workflow />
 
       <Footer />
+
+      <ToastContainer autoClose={1000} position="top-right" />
     </section>
   );
 }

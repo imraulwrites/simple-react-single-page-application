@@ -36,7 +36,7 @@ function PricingContainer() {
         Choose the plan that fits your needs. Upgrade or downgrade anytime.
       </p>
 
-      <div className="grid grid-cols-3 justify-center gap-7">
+      <div className="grid grid-cols-1 md:grid-cols-3 justify-center gap-7">
         <PricingCard
           className="bg-[#f9fafcFF] text-muted"
           heading="Starter"
